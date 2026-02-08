@@ -1,0 +1,34 @@
+training:
+# Optimization
+  beta1: 0.9
+  beta2: 0.999
+  lr_d: 2e-5
+  lr_m: 7e-6
+  lr_attr: 0.0001
+  non_adversarial_lr: 6e-5
+
+  batch_size: 8
+  epochs: 40
+
+  # Loss weights
+  lambda_id: 1.0
+  lambda_l2: 1.0
+  lambda_lnd: 1.0
+  lambda_rec: 0.01
+  lambda_vgg: 1.0
+
+  # R1 regularization
+  r1_param: 14
+
+  # Flags
+  use_cycle: true
+  use_reconstruction: true
+  use_id: true
+  use_landmark: true
+  use_adverserial: false
+  use_l2: true
+
+  train_percentage: 0.95
+  id_differs_attr_train_ratio: 3
+
+  generator_size: 256
